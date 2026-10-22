@@ -4,42 +4,76 @@
 <body><main>
 <nav><a href="./">Destek</a><a href="gizlilik.html">Gizlilik</a></nav>
 <h1>Gizlilik Politikası</h1>
-<p class="meta">İrem Bulut Randevu (iOS) · Yürürlük: 20 Ekim 2026</p>
+<p class="meta">İrem Bulut Randevu (iOS) · Yürürlük: 22 Ekim 2026 · Önceki sürüm: 20 Ekim 2026</p>
 
-<p>İrem Bulut Randevu, danışmanın kendi randevu ve danışan kayıtlarını telefonunda tutması için hazırlanmış bir ajanda uygulamasıdır. Bu metin, uygulamanın hangi verileri işlediğini ve bu verilerin nerede tutulduğunu açıklar.</p>
+<p>İrem Bulut Randevu, danışmanın kendi randevu ve danışan kayıtlarını telefonunda tutması için hazırlanmış bir ajanda uygulamasıdır. Bu metin, uygulamanın hangi verileri işlediğini, bu verilerin nerede tutulduğunu ve neden gerektiğini açıklar.</p>
 
-<h2>Toplanan veriler</h2>
-<p>Uygulama geliştiriciye ya da herhangi bir sunucuya <strong>hiçbir veri göndermez</strong>. Hesap oluşturma, analiz, reklam ya da izleme aracı bulunmaz.</p>
-<p>Uygulamayı kullanan kişinin girdiği şu bilgiler <strong>yalnızca cihazda</strong> saklanır:</p>
+<h2>Özet</h2>
+<ul>
+<li>Danışan ve randevu kayıtları <strong>yalnızca telefonda</strong> tutulur.</li>
+<li>Uygulamayı kullanmak için bir <strong>hesapla giriş</strong> gerekir. Hesap için e-posta adresi ve şifre işlenir.</li>
+<li>Hesap aynı anda tek telefonda kullanılabilsin diye uygulamanın bu telefona özel rastgele bir <strong>kurulum kimliği</strong> sunucuda tutulur.</li>
+<li>Reklam, analiz ya da izleme aracı yoktur. Veriler satılmaz ve reklam amacıyla paylaşılmaz.</li>
+</ul>
+
+<h2>Hesap ve giriş</h2>
+<p>Uygulama yalnızca uygulama sağlayıcısının açtığı hesaplarla kullanılabilir; uygulama içinden kayıt olunamaz. Giriş için şu veriler işlenir:</p>
+<ul>
+<li><strong>E-posta adresi ve şifre:</strong> Hesabı tanımak için. Şifre sunucuda açık metin olarak değil, tek yönlü özet (hash) olarak saklanır.</li>
+<li><strong>Oturum bilgisi:</strong> Girişin sürmesi için telefonun güvenli anahtar zincirinde (iOS Keychain) tutulur.</li>
+<li><strong>Giriş kayıtları:</strong> Altyapı sağlayıcısı, güvenlik amacıyla giriş zamanı ve IP adresi gibi teknik kayıtlar tutar.</li>
+</ul>
+
+<h2>Tek cihaz kuralı</h2>
+<p>Bir hesap aynı anda yalnızca bir telefonda kullanılabilir. Bunun için uygulama ilk açılışta bu kuruluma özel <strong>rastgele bir kimlik</strong> üretir. Bu kimlik telefonun donanım kimliği ya da reklam kimliği değildir; başka uygulamalarla ilişkilendirilemez. Girişte bu kimlik ve giriş zamanı sunucuya kaydedilir.</p>
+<p>Aynı hesapla başka bir telefonda giriş yapılırsa önceki telefon kilitlenir. Kilitlenen telefondaki kayıtlar silinmez; yeniden giriş yapılana kadar gösterilmez.</p>
+<p>Uygulama, erişimin hâlâ geçerli olduğunu düzenli olarak sunucuya sorar. İnternet yoksa son başarılı kontrolden sonra 72 saat çalışmaya devam eder; bu süre dolunca bir kez internete bağlanması istenir.</p>
+
+<h2>Telefonda kalan veriler</h2>
+<p>Uygulamayı kullanan kişinin girdiği şu bilgiler <strong>yalnızca cihazda</strong> saklanır ve sunucuya gönderilmez:</p>
 <ul>
 <li>Danışan adı ve telefon numarası</li>
 <li>Randevu tarihi, saati, süresi, görüşme türü ve notları</li>
 <li>Uygulama ayarları</li>
 </ul>
+<p>Bunun tek istisnası aşağıdaki isteğe bağlı otomatik WhatsApp hatırlatmasıdır.</p>
+
+<h2>İsteğe bağlı: otomatik WhatsApp hatırlatması</h2>
+<p>Bu özellik varsayılan olarak kapalıdır. Ayarlardan “Otomatik WhatsApp” seçilirse, WhatsApp izni verilmiş danışanların yaklaşan randevuları için yalnızca şu bilgiler sunucuya gönderilir: <strong>danışanın telefon numarası, randevu saati</strong> ve randevuya ait rastgele bir kayıt numarası. Danışan adı, görüşme türü ve randevu notu gönderilmez.</p>
+<p>Mesaj, işletmenin kendi WhatsApp Business hesabı üzerinden Meta altyapısıyla gönderilir ve Meta’nın koşullarına tabidir. Ayarlardan elle gönderim seçildiğinde sunucudaki bekleyen hatırlatmalar iptal edilir. Sunucudaki hatırlatma kayıtları randevu tarihinden <strong>30 gün sonra kendiliğinden silinir</strong>.</p>
 
 <h2>Bildirimler</h2>
 <p>Randevu hatırlatmaları cihazın kendi bildirim sistemiyle, yerel olarak planlanır. Varsayılan ayarda kilit ekranındaki bildirimlerde danışan adı gösterilmez.</p>
 
 <h2>Mesajlar</h2>
-<p>Danışana hatırlatma ya da onay mesajı göndermek istendiğinde uygulama, WhatsApp ya da Mesajlar uygulamasını hazır bir metinle açar. Mesajı kullanıcı kendisi gönderir. Gönderilen mesaj, ilgili uygulamanın kendi gizlilik koşullarına tabidir.</p>
+<p>Danışana elle hatırlatma ya da onay mesajı göndermek istendiğinde uygulama, WhatsApp ya da Mesajlar uygulamasını hazır bir metinle açar. Mesajı kullanıcı kendisi gönderir. Gönderilen mesaj, ilgili uygulamanın kendi gizlilik koşullarına tabidir.</p>
 
 <h2>Yedekleme</h2>
 <p>Yedek dosyası yalnızca kullanıcı “Yedeği dışa aktar” dediğinde oluşturulur. Dosyanın nereye kaydedileceğini ya da kiminle paylaşılacağını kullanıcı iOS paylaşım menüsünden kendisi seçer. Yedek dosyası kişisel veri içerir ve şifrelenmemiştir; güvenli bir yerde saklanmalıdır.</p>
-<p>iPhone’un iCloud ya da bilgisayar yedeği açıksa, uygulama verileri Apple’ın cihaz yedeğine dahil edilebilir.</p>
+<p>iPhone’un iCloud ya da bilgisayar yedeği açıksa, uygulama kayıtları Apple’ın cihaz yedeğine dahil edilebilir. Oturum bilgisi ve kurulum kimliği yalnızca bu telefonda kalacak şekilde saklanır; yedekten yeni bir telefona taşınmaz, yeni telefonda yeniden giriş gerekir.</p>
+
+<h2>Sunucu ve hizmet sağlayıcılar</h2>
+<p>Hesap, tek cihaz kontrolü ve isteğe bağlı otomatik hatırlatma için Supabase altyapısı kullanılır. Sunucular Avrupa Birliği’nde (Frankfurt, Almanya) bulunur. Bu nedenle yukarıda sayılan sınırlı veriler yurt dışındaki bu sunuculara aktarılır. Otomatik WhatsApp hatırlatması kullanılırsa mesaj gönderimi Meta Platforms tarafından yapılır.</p>
 
 <h2>Veri sorumlusu ve KVKK</h2>
-<p>Danışan verilerini uygulamaya giren ve kullanan kişi, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusudur. Uygulamanın geliştiricisi bu verilere erişmez ve bu verileri işlemez.</p>
+<p>Danışan verilerini uygulamaya giren ve kullanan kişi, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında bu verilerin veri sorumlusudur. Uygulamanın geliştiricisi telefonda kalan danışan kayıtlarına erişmez.</p>
+<p>Hesap verileri (e-posta, kurulum kimliği, giriş kayıtları) uygulamanın geliştiricisi tarafından, uygulamaya erişimi sağlamak ve yetkisiz kullanımı önlemek amacıyla işlenir. Otomatik WhatsApp hatırlatması kullanılırsa sunucuya gönderilen danışan telefon numarası ve randevu saati, veri sorumlusu adına ve yalnızca hatırlatma göndermek için işlenir.</p>
+<p>KVKK’nın 11. maddesindeki haklarınızı (bilgi talep etme, düzeltme, silme vb.) kullanmak için <a href="mailto:furkanfatiharslan23+kvkk@gmail.com">furkanfatiharslan23+kvkk@gmail.com</a> adresine e-posta gönderebilirsiniz. Kişisel bilgi içeren talepleri herkese açık destek sayfasına yazmayın.</p>
 
-<h2>Verilerin silinmesi</h2>
-<p>Kayıtlar uygulama içinden silinebilir. Uygulama cihazdan kaldırıldığında cihazdaki tüm verileri de silinir.</p>
+<h2>Saklama ve silme</h2>
+<ul>
+<li>Telefondaki kayıtlar uygulama içinden silinebilir. Uygulama cihazdan kaldırıldığında telefondaki uygulama verileri de silinir.</li>
+<li>Otomatik WhatsApp hatırlatma kayıtları (danışan telefon numarası ve randevu saati), randevu tarihinden 30 gün sonra kendiliğinden silinir.</li>
+<li>Hesap, kurulum kimliği ve giriş kayıtları hesap kullanıldığı sürece saklanır. Hesabın ve bu kayıtların silinmesi <a href="mailto:furkanfatiharslan23+kvkk@gmail.com">furkanfatiharslan23+kvkk@gmail.com</a> adresinden istenebilir.</li>
+</ul>
 
 <h2>Çocuklar</h2>
 <p>Uygulama çocuklara yönelik değildir.</p>
 
 <h2>Değişiklikler</h2>
-<p>Uygulamaya veri işleme biçimini değiştiren bir özellik eklenirse, bu politika özellik yayınlanmadan önce güncellenir.</p>
+<p>Uygulamaya veri işleme biçimini değiştiren bir özellik eklenirse, bu politika özellik yayınlanmadan önce güncellenir ve sayfanın başındaki yürürlük tarihi değiştirilir.</p>
 
 <h2>İletişim</h2>
-<p>Sorularınız için <a href="./">destek sayfasını</a> kullanabilirsiniz.</p>
+<p>Genel sorular için <a href="./">destek sayfasını</a>, kişisel verilerle ilgili başvurular için <a href="mailto:furkanfatiharslan23+kvkk@gmail.com">furkanfatiharslan23+kvkk@gmail.com</a> adresini kullanabilirsiniz.</p>
 <footer>© 2026 Furkan Fatih Arslan</footer>
 </main></body></html>
